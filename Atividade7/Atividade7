@@ -1,0 +1,41 @@
+┌──────────────────────────────┐
+│           Usuario            │
+├──────────────────────────────┤
+│ - codigo: int                │
+│ - nome: String               │
+│ - email: String              │
+│ - senha: String              │
+├──────────────────────────────┤
+│ + fazerLogin(): boolean      │
+│ + adicionarContato(): void   │
+│ + removerContato(): void     │
+└──────────────┬───────────────┘
+               │
+               │ 1
+               │
+               │
+               │ 0..*
+┌──────────────▼───────────────┐
+│           Contato            │
+├──────────────────────────────┤
+│ - nome: String               │
+│ - telefone: String           │
+├──────────────────────────────┤
+│ + adicionarEmail(): void     │
+│ + removerEmail(): void       │
+│ + buscarEmailPorTipo(): Email│
+└──────────────┬───────────────┘
+               │
+               │ 1
+               │
+               │
+               │ 1..*
+┌──────────────▼───────────────┐
+│            Email             │
+├──────────────────────────────┤
+│ - endereco: String           │
+│ - tipo: TipoEmail            │
+├──────────────────────────────┤
+│ + getEndereco(): String      │
+│ + getTipo(): TipoEmail       │
+└──────────────────────────────┘
